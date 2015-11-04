@@ -4,15 +4,15 @@ normalize-css()
 base()
 
 body
-  padding: 0px
-  background: #999
+  padding 0px
+  background #555
 
 section
-  lost-utility: clearfix;
-  /*lost-utility: edit;*/
+  lost-utility clearfix;
+  /*lost-utility edit;*/
 /*
 div
-  lost-column: 1/3;
+  lost-column 1/3;
 
 */
 position-fixed(top bottom left)
@@ -21,40 +21,135 @@ position-fixed(top bottom left)
   bottom bottom
   left left
 
+hamburger_height = 30px
+hamburger_width = 40px
+hamburger_layer_height = 6px
+
+
 .wrap
-  display: flex
-  min-height: 100vh
+  display flex
+  min-height 100vh
+
+  @media (max-width 775px)
+    display block
 
   header
-    width: 135 px
-    background: white
-    padding: 30px 0
-    min-height: 100vh
+    width 135 px
+    background white
+    padding 30px 0
+
 
     .header-position
       position-fixed 0 0 0
-      width: 135px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
+      width 135px
+      display flex
+      flex-direction column
+      justify-content space-between
 
   .navigation
     ul
-      list-style: none
-      margin: 20px 0
-      padding: 0 20px 0 0
-      text-align: right
+      list-style none
+      margin 20px 0
+      padding 0 20px 0 0
+      text-align right
 
       li
-        margin-bottom: 10px
+        margin-bottom 10px
 
         &:last-child
-          margin-bottom: 0
+          margin-bottom 0
 
   .logo
-    height: 80px
+    background-image url(../img/CombinationMarkBottomText.svg)
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    /*background-color pink*/
+    height 230px
+    max-width 135px
+    padding 0
+    margin 0
 
   .email-link
-    padding-right: 20px
-    text-align: right
+    padding-right 20px
+    text-align right
 
+  .mobile-nav-toggle
+    display none
+    width hamburger_width
+    height hamburger_height
+    /*background pink*/
+    margin-right 20px
+    /*align-items center*/
+    cursor pointer
+    z-index 2
+
+    .hamburger-inner
+      display block
+      width hamburger_width
+      height hamburger_layer_height
+      margin-top hamburger_layer_height * 2
+      background #333
+      transition all 0.4s ease-in-out
+
+      &:before
+      &:after
+        margin-top 10px
+        display block
+        position absolute
+        content ""
+        width hamburger_width
+        height hamburger_layer_height
+        background #333
+        transition all 0.4s ease-in-out
+
+      &:before
+        /*margin-top 10px*/
+        top 0px
+      &:after
+        /*margin-top 10px*/
+        top hamburger_layer_height * 4
+
+    .hamburger-open
+      .hamburger-inner
+        background none
+        &:before
+        &:after
+          top hamburger_layer_height * 2
+        &:before
+          transform rotate(-45deg)
+        &:after
+          transform rotate(45deg)
+
+
+
+
+/**
+*
+* Media Queries
+*
+**/
+
+@media (max-width 775px)
+  .wrap header
+    width auto
+    padding 10px
+
+    .header-position
+      width auto
+      position relative
+      top auto
+      bottom auto
+      left auto
+      flex-direction row
+      align-items center
+
+    .navigation
+    .email-link
+      display none
+    .mobile-nav-toggle
+      display block
+    .logo
+      background-image url(../img/CombinationMark.svg)
+      max-height 50px
+      width 100%
