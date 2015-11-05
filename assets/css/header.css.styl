@@ -1,0 +1,162 @@
+/**
+*
+* Mixins
+*
+*/
+position-fixed(top bottom left)
+  position fixed
+  top top
+  bottom bottom
+  left left
+
+
+/**
+*
+* Variables
+*
+*/
+hamburger_height = 30px
+hamburger_width = 40px
+hamburger_layer_height = 6px
+
+
+/**
+*
+* CSS - No Media Queries
+*
+*/
+.wrap
+  display flex
+  min-height 100vh
+
+  header
+    width 135 px
+    background white
+    padding 30px 0
+    a
+      text-decoration none
+      color #555
+    .header-position
+      position-fixed 0 0 0
+      width 135px
+      display flex
+      flex-direction column
+      justify-content space-between
+  .site-nav
+    ul
+      list-style none
+      margin 20px 0
+      padding 0 20px 0 0
+      text-align right
+      li
+        margin-bottom 10px
+        &:last-child
+          margin-bottom 0
+
+  .logo
+    background-image url(../img/CombinationMarkBottomText.svg)
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    /*background-color pink*/
+    height 230px
+    max-width 135px
+    padding 0
+    margin 0
+
+  .email-link
+    padding-right 20px
+    text-align right
+
+  .mobile-nav-toggle
+    display none
+    width hamburger_width
+    height hamburger_height
+    margin-right 20px
+    cursor pointer
+    z-index 2
+    .hamburger-inner
+      display block
+      width hamburger_width
+      height hamburger_layer_height
+      margin-top hamburger_layer_height * 2
+      background #333
+      transition all 0.4s ease-in-out
+      &:before
+      &:after
+        margin-top 10px
+        display block
+        position absolute
+        content ""
+        width hamburger_width
+        height hamburger_layer_height
+        background #333
+        transition all 0.4s ease-in-out
+      &:before
+        /*margin-top 10px*/
+        top 0px
+      &:after
+        /*margin-top 10px*/
+        top hamburger_layer_height * 4
+
+  .hamburger-open
+    .hamburger-inner
+      background none
+      &:before
+      &:after
+        top hamburger_layer_height * 2
+      &:before
+        transform rotate(-45deg)
+      &:after
+        transform rotate(45deg)
+
+  .mobile-nav
+    display none
+    position absolute
+    width 100%
+    background white
+    padding 30px 0 20px
+    transform translateY(-100%)
+    transition all 0.5s ease-in-out
+    ul
+      list-style none
+      margin 0
+      padding 0
+    li
+      text-align center
+      margin-bottom 10px
+
+
+
+/**
+*
+* Media Queries
+*
+**/
+
+@media (max-width 775px)
+  .wrap
+    display block
+    header
+      width auto
+      padding 10px
+      .header-position
+        width auto
+        position relative
+        top auto
+        bottom auto
+        left auto
+        flex-direction row
+        align-items center
+      .site-nav
+      .email-link
+        display none
+      .mobile-nav-toggle
+        display flex
+      .logo
+        background-image url(../img/CombinationMark.svg)
+        max-height 50px
+        width 100%
+    .mobile-nav.hamburger-open
+      display block
+      transform translateY(0%)

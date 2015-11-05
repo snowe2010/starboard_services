@@ -1,12 +1,20 @@
+mixin nav-content()
+  ul.links
+    li: a(href="#quote") quote
+    li: a(href="#projects") projects
+    li: a(href="#contact") contact
+
+.mobile-nav
+  +nav-content()
+
+
 header
   .header-position
     h1.logo
 
-    nav.navigation
-      ul.links
-        li: a(href="#quote") quote
-        li: a(href="#projects") projects
-        li: a(href="#contact") contact
+    nav.site-nav
+      +nav-content()
+
 
     a(href="mailto:clifton.thrailkill@gmail.com").email-link +contact
 

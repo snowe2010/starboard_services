@@ -9,7 +9,7 @@ lost         = require 'lost'
 nestedprops  = require 'postcss-nested-props'
 webpack      = require 'roots-webpack'
 coffeeloader = require 'coffee-loader'
-$            = require 'jquery'
+# $            = require 'jquery'
 
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
