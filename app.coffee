@@ -6,16 +6,14 @@ css_pipeline = require 'css-pipeline'
 accord       = require 'accord'
 postcss      = accord.load 'postcss'
 lost         = require 'lost'
-nestedprops  = require 'postcss-nested-props'
+nestedprops  = require('postcss-nested-props').default
 webpack      = require 'roots-webpack'
 coffeeloader = require 'coffee-loader'
-# $            = require 'jquery'
 
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
 
   extensions: [
-    # js_pipeline(files: 'assets/js/*.coffee', out: 'js/build.js'),
     webpack(
       entry: './assets/js/main.coffee'
       output:
