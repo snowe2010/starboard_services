@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500)
+  
 /**
 *
 * Mixins
@@ -26,138 +28,205 @@ hamburger_layer_height = 6px
 *
 */
 .wrap
-  display flex
-  min-height 100vh
-
   header
-    width 135 px
-    background white
-    padding 30px 0
-    a
-      text-decoration none
-      color #555
-    .header-position
-      position-fixed 0 0 0
-      width 135px
+    display flex
+    background #212121
+    height 10vh
+    align-items center
+    align-self center
+    justify-content center
+    .site-nav
+    .mobile-nav
+      width 100%
       display flex
-      flex-direction column
-      justify-content space-between
-  .site-nav
-    ul
-      list-style none
-      text-align right
-      margin 20px 0
-      padding 0 20px 0 0
-      li
-        margin-bottom 10px
-        &:last-child
-          margin-bottom 0
-
-
-  .logo
-    background-image url(../img/CombinationMarkBottomText.svg)
-    background-repeat no-repeat
-    background-position center
-    background-size contain
-    /*background-color pink*/
-    height 230px
-    max-width 135px
-    padding 0
-    margin 0
-
-  .email-link
-    padding-right 20px
-    text-align right
-
-  .mobile-nav-toggle
-    display none
-    width hamburger_width
-    height hamburger_height
-    margin-right 20px
-    cursor pointer
-    z-index 2
-    .hamburger-inner
-      display block
-      width hamburger_width
-      height hamburger_layer_height
-      margin-top hamburger_layer_height * 2
-      background #333
-      transition all 0.4s ease-in-out
-      &:before
-      &:after
-        margin-top 10px
-        display block
-        position absolute
-        content ""
-        width hamburger_width
-        height hamburger_layer_height
-        background #333
-        transition all 0.4s ease-in-out
-      &:before
-        /*margin-top 10px*/
-        top 0px
-      &:after
-        /*margin-top 10px*/
-        top hamburger_layer_height * 4
-
-  .hamburger-open
-    .hamburger-inner
-      background none
-      &:before
-      &:after
-        top hamburger_layer_height * 2
-      &:before
-        transform rotate(-45deg)
-      &:after
-        transform rotate(45deg)
-
-  .mobile-nav
-    display none
-    position absolute
-    width 100%
-    background white
-    padding 30px 0 20px
-    transform translateY(-100%)
-    transition all 0.5s ease-in-out
-    ul
-      list-style none
-      margin 0
-      padding 0
-    li
-      text-align center
-      margin-bottom 10px
-
-
-
-/**
-*
-* Media Queries
-*
-**/
-
-@media (max-width 775px)
-  .wrap
-    display block
-    header
-      width auto
-      padding 10px
-      .header-position
-        width auto
-        position relative
-        top auto
-        bottom auto
-        left auto
-        flex-direction row
-        align-items center
-      .site-nav
-      .email-link
-        display none
-      .mobile-nav-toggle
-        display flex
+      justify-content space-around
+      align-items center
       .logo
-        background-image url(../img/CombinationMark.svg)
-        max-height 50px
-        width 100%
-    .mobile-nav.hamburger-open
-      display block
-      transform translateY(0%)
+        height 60px
+        width auto
+        float left
+      .links
+        font-family 'Raleway', Arial, sans-serif
+        font-weight: 500
+        text-align: center
+        text-transform: uppercase
+        margin: 0px
+        align-items center
+        display flex
+        align-items center
+        justify-content center
+        *
+          box-sizing: border-box
+          -webkit-transition: all 0.35s ease
+          transition: all 0.35s ease
+
+        li
+          list-style: outside none none
+          margin: 0 1.5em
+          overflow: hidden
+
+        a
+          padding: 0.3em 0
+          color: rgba(255, 255, 255, 0.5)
+          position: relative
+          display: inline-block
+          letter-spacing: 1px
+          margin: 0
+          text-decoration: none
+          &:after
+          &:before
+            position: absolute
+            -webkit-transition: all 0.35s ease
+            transition: all 0.35s ease
+          &:before
+            top: 100%
+            display: block
+            height: 3px
+            width: 100%
+            content: ""
+            background-color: #c0392b
+          &:after
+            padding: 0.3em 0
+            position: absolute
+            top: 100%
+            left: 0
+            content: attr(data-hover)
+            color: white
+            white-space: nowrap
+        li:hover a, .current a
+          transform: translateY(-100%)
+
+
+// One pixel larger else content disappears
+@media (min-width: 776px)
+  .wrap
+    header
+      .mobile-nav
+        display none
+@media (max-width: 775px)
+  .wrap
+    header
+      height 15vh
+      align-items center   
+      .site-nav
+        display none
+      .mobile-nav
+        #home
+          display none
+        .logo 
+          height 12vh
+        .links
+          flex-direction column
+
+//.wrap
+//  display flex
+//  min-height 100vh
+//
+//
+//  .logo
+//    background-image url(../img/CombinationMarkBottomText.svg)
+//    background-repeat no-repeat
+//    background-position center
+//    background-size contain
+//    /*background-color pink*/
+//    height 230px
+//    max-width 135px
+//    padding 0
+//    margin 0
+//
+//  .email-link
+//    padding-right 20px
+//    text-align right
+//
+//  .mobile-nav-toggle
+//    display none
+//    width hamburger_width
+//    height hamburger_height
+//    margin-right 20px
+//    cursor pointer
+//    z-index 2
+//    .hamburger-inner
+//      display block
+//      width hamburger_width
+//      height hamburger_layer_height
+//      margin-top hamburger_layer_height * 2
+//      background #333
+//      transition all 0.4s ease-in-out
+//      &:before
+//      &:after
+//        margin-top 10px
+//        display block
+//        position absolute
+//        content ""
+//        width hamburger_width
+//        height hamburger_layer_height
+//        background #333
+//        transition all 0.4s ease-in-out
+//      &:before
+//        /*margin-top 10px*/
+//        top 0px
+//      &:after
+//        /*margin-top 10px*/
+//        top hamburger_layer_height * 4
+//
+//  .hamburger-open
+//    .hamburger-inner
+//      background none
+//      &:before
+//      &:after
+//        top hamburger_layer_height * 2
+//      &:before
+//        transform rotate(-45deg)
+//      &:after
+//        transform rotate(45deg)
+//
+//  .mobile-nav
+//    display none
+//    position absolute
+//    width 100%
+//    background white
+//    padding 30px 0 20px
+//    transform translateY(-100%)
+//    transition all 0.5s ease-in-out
+//    ul
+//      list-style none
+//      margin 0
+//      padding 0
+//    li
+//      text-align center
+//      margin-bottom 10px
+//
+//
+//
+///**
+//*
+//* Media Queries
+//*
+//**/
+//
+//@media (max-width 775px)
+//  .wrap
+//    display block
+//    header
+//      width auto
+//      padding 10px
+//      .header-position
+//        width auto
+//        position relative
+//        top auto
+//        bottom auto
+//        left auto
+//        flex-direction row
+//        align-items center
+//      .site-nav
+//      .email-link
+//        display none
+//      .mobile-nav-toggle
+//        display flex
+//      .logo
+//        background-image url(../img/CombinationMark.svg)
+//        max-height 50px
+//        width 100%
+//    .mobile-nav.hamburger-open
+//      display block
+//      transform translateY(0%)

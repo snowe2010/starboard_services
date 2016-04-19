@@ -1,22 +1,30 @@
 mixin nav-content()
   ul.links
-    li: a(href="#quote") quote
-    li: a(href="#projects") projects
-    li: a(href="#contact") contact
-
-.mobile-nav
+    each val in ["home", "services", "projects", "contact"]
+      li: a(id=val href="/"+val data-hover=val)= val
+      
+mixin largenav()
+  a(href="/"): img.logo#large(src="../img/CombinationMark.svg")
+  +nav-content()
+  
+mixin smallnav()
+  a(href="/"): img.logo#small(href="/" src="../img/sail.svg")
   +nav-content()
 
-
+  
+// menu bar credit: http://codepen.io/littlesnippets
 header
-  .header-position
-    h1.logo
+  nav.mobile-nav
+    +smallnav()
+  nav.site-nav
+    +largenav()
 
-    nav.site-nav
-      +nav-content()
+//
+//    a(href="mailto:clifton.thrailkill@gmail.com").email-link +contact
+//    a(href="tel:2547177994").phone +call
+//    a.mobile-nav-toggle#button: .hamburger-inner
 
-
-    a(href="mailto:clifton.thrailkill@gmail.com").email-link +contact
-
-    a.mobile-nav-toggle#button: .hamburger-inner
-
+//  ul.bar
+//    li.current
+//      a(href="#" data-hover="Home") Home
+//      
