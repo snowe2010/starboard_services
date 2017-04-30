@@ -1,56 +1,96 @@
 @import url(https://fonts.googleapis.com/css?family='Roboto+Slab':400,300,700)
+@import '_settings'
+@import '_buttons'
 
-  
 scrollbar_width = 17px
 header_width = 135px
 
-// .content
-//   flex: 1
-//   // display flex
-//   // height 100%
-//   div
-//     // lost-utility clearfix
-//     lost-row 1/3 0
-//   .about
-//     width calc(100vw - header_width - scrollbar_width)
-//     // height 100vh
-//     overflow hidden
-//     .boats
-//       width @width
-//       // margin-top -3000px
-//   .quote
-//     width calc(100vw - header_width - scrollbar_width)
-//     // height 100vh
-//     overflow hidden
-//     .girl
-//       width @width
-//       margin-top -200px
-
-section.content
+.content
   font-family 'Roboto Slab', serif
-  color #fff
+  color #000
   height 100vh
-  .about
+  text-align center
+  .large
     h1
       text-align center
+      margin 0
+    section.cta_section
+      background url(../img/wood-pattern-ground-parquet-floor.jpg) no-repeat center center fixed
+      background-size cover
+      lost-align center
+      height 570px
+      .cta
+        width 400px
+        margin 10px 0
+        background #fff
+        display flex
+        flex-flow column nowrap
+        align-items center
+        justify-content center
+        padding 3.5rem
+        font-size 1.5rem
+        p
+          margin 0
+        #homepage_title
+          font-weight: 300
+          line-height 1.2
+          max-width 75%
+          font-size 3rem
+        #cta_separator
+          width 100px
+          border-top 1px solid $starboard_red_dark
+          border-bottom 1px solid $starboard_red_dark
+          margin 2rem auto
+        .cta_button
+          margin-top 2rem
+          cta_button()
+
+
+    .fold
+      section.services_panel
+        background-color #365d6a
+        .services
+          //lost-flex-container row
+          lost-center 980px
+          .col
+            //&:first-child
+            //  lost-offset -1/6
+            //&:last-child
+            //  lost-offset 1/6
+            lost-column 1/3
+            background: #bbffeb
+  .mobile
     .cta_button
-        position: relative
-        vertical-align: top
-        width: 100%
-        height: 60px
-        padding: 0
-        font-size: 22px
-        color: white
-        text-align: center
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
-        background: #34495e
-        border: 0
-        border-bottom: 2px solid #263849
-        cursor: pointer
-        -webkit-box-shadow: inset 0 -2px #263849
-        box-shadow: inset 0 -2px #263849
-        &:active
-          top: 1px
-          outline: none
-          -webkit-box-shadow: none
-          box-shadow: none
+      position: relative
+      vertical-align: top
+      width: 100%
+      height: 60px
+      padding: 0
+      font-size: 22px
+      color: white
+      text-align: center
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+      background: #34495e
+      border: 0
+      border-bottom: 2px solid #263849
+      cursor: pointer
+      -webkit-box-shadow: inset 0 -2px #263849
+      box-shadow: inset 0 -2px #263849
+      &:active
+        top: 1px
+        outline: none
+        -webkit-box-shadow: none
+        box-shadow: none
+
+// One pixel larger else content disappears
+@media (min-width: 776px)
+  .mobile
+    .cta
+      display none
+@media (max-width: 775px)
+  .large
+    display none
+  .mobile
+    h1
+      font-size 1.5em
+      text-align center

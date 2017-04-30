@@ -1,0 +1,23 @@
+@import '_settings'
+radius = 0px
+
+button()
+  border none
+  outline none
+  border-radius radius
+  color $color_text_primary
+  padding 10px 20px
+
+cta_button()
+  button()
+  background-color $starboard_red_dark
+  transition all 0.3s
+  &:hover
+    background-color darken($starboard_red_dark, 15%)
+
+
+clear_button()
+  button()
+  background-color transparent
+  &:hover
+    background-color rgba($color_text_primary, .15)

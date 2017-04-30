@@ -11,7 +11,7 @@ webpack      = require 'roots-webpack'
 coffeeloader = require 'coffee-loader'
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', '.idea/**']
 
   extensions: [
     webpack(
@@ -27,6 +27,7 @@ module.exports =
   ]
 
   stylus:
+    import: ['rupture']
     use: [axis(), rupture(), autoprefixer()]
     sourcemap: true
 
@@ -37,4 +38,4 @@ module.exports =
     pretty: true
 
   postcss:
-    use: [lost(), nestedprops]
+    use: [lost()]
