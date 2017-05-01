@@ -17,9 +17,11 @@
     "postcss": "^5.0.19",
     "postcss-nested-props": "^1.1.0",
     "poststylus": "^0.2.3",
-    "pug": "^2.0.0-beta.12",
-    "roots-webpack": "0.0.2",
+    "roots-webpack": "0.0.3",
     "rupture": "^0.6.1",
     "stylus": "^0.54.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.0.3"
   }
 }

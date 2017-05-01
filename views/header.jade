@@ -1,8 +1,8 @@
 mixin nav-content()
   ul.links
     each val in ["home", "services", "projects", "contact"]
-      li: a(id=val href="/"+val data-hover=val)= val
-      
+      li: a(id=val href="#"+val data-hover=val)= val
+
 mixin largenav()
   a(href="/"): img.logo#large(src="../img/CombinationMark.svg")
   +nav-content()

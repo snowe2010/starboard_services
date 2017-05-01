@@ -15,12 +15,15 @@ module.exports =
 
   extensions: [
     webpack(
-      entry: './assets/js/main.coffee'
+      entry: './assets/js/index.tsx'
       output:
         filename: 'js/bundle.js'
+#      resolve:
+#        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
       module:
         loaders: [
-          { test: /\.coffee$/, loader: "coffee-loader"}
+          { test: /\.coffee$/, loader: "coffee-loader"},
+          { test: /\.tsx?$/, loader: 'ts-loader'}
         ]
       ),
     css_pipeline(files: 'assets/css/*.styl')

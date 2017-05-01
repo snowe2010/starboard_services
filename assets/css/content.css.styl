@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family='Roboto+Slab':400,300,700)
 @import '_settings'
 @import '_buttons'
+@import "material"
 
 scrollbar_width = 17px
 header_width = 135px
@@ -43,20 +44,16 @@ header_width = 135px
           margin 2rem auto
         .cta_button
           margin-top 2rem
-          cta_button()
-
+          //cta_button()
+          button($starboard_red_dark, large)
 
     .fold
       section.services_panel
-        background-color #365d6a
+        background-color $starboard_fold_dark
         .services
           //lost-flex-container row
           lost-center 980px
           .col
-            //&:first-child
-            //  lost-offset -1/6
-            //&:last-child
-            //  lost-offset 1/6
             lost-column 1/3
             background: #bbffeb
   .mobile

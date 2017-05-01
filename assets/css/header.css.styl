@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500)
-  
+@import "_settings.styl"
+
 /**
 *
 * Mixins
@@ -30,8 +31,7 @@ hamburger_layer_height = 6px
 .wrap
   header
     display flex
-    background #212121
-    //background #ffffff
+    background $starboard_header_background
     height 7vh
     align-items center
     align-self center
@@ -48,33 +48,34 @@ hamburger_layer_height = 6px
         float left
       .links
         font-family 'Raleway', Arial, sans-serif
-        font-weight: 500
-        text-align: center
-        text-transform: uppercase
-        margin: 0px
+        font-weight 500
+        text-align center
+        text-transform uppercase
+        margin 0
         align-items center
         display flex
-        align-items center
         justify-content center
         *
-          box-sizing: border-box
-          -webkit-transition: all 0.35s ease
-          transition: all 0.35s ease
+          box-sizing border-box
+          -webkit-transition all 0.35s ease
+          transition all 0.35s ease
 
         li
-          list-style: outside none none
-          margin: 0 1.5em
-          overflow: hidden
+          list-style outside none none
+          margin 0 1.5em
+          overflow hidden
+          -webkit-backface-visibility hidden;
+          -webkit-transform translateZ(0) scale(1.0, 1.0);
 
         a
-          padding: 0.3em 0
-          //color: rgba(0, 0, 0, 0.5)
-          color: rgba(255, 255, 255, 0.5)
-          position: relative
-          display: inline-block
-          letter-spacing: 1px
-          margin: 0
-          text-decoration: none
+          padding 0.3em 0
+          //color rgba(0, 0, 0, 0.5)
+          color rgba(red($starboard_header_font_color), green($starboard_header_font_color), blue($starboard_header_font_color), 0.5)
+          position relative
+          display inline-block
+          letter-spacing 1px
+          margin 0
+          text-decoration none
           &:after
           &:before
             position: absolute
@@ -94,7 +95,7 @@ hamburger_layer_height = 6px
             left: 0
             content: attr(data-hover)
             //color: black
-            color: white
+            color: $starboard_header_font_color
             white-space: nowrap
         li:hover a, .current a
           transform: translateY(-100%)

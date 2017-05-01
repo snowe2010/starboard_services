@@ -1,0 +1,16 @@
+include ./_mixins.jade
+.card-container
+  h2 #{card_title}
+  .img-wrapper
+    .test
+  p.detail #{card_subtitle}
+  .button-wrapper
+    .layer
+    button.main-button.fa.fa-info.card-button
+      span.icon-info2
+      .ripple
+  .layered-content
+    button.close-button.fa.fa-times.ihn.card-button
+      span.icon-cross
+    .card-content
+      p #{card_help}
