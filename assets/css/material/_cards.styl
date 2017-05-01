@@ -41,9 +41,7 @@ button:hover {
 }
 
 .card-container
-  width: 330px;
   height: 508px;
-  max-width: 330px;
   background: white;
   position: relative;
   top: 50%;
@@ -64,20 +62,18 @@ button:hover {
     padding: 20px;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
-
   .img-wrapper
-     padding: 0;
-     position: relative;
-
-  .img-wrapper:after
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(62, 79, 178, .25);
-    width: 100%;
+    padding: 0;
+    position: relative;
+    &:after
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      //background: rgba(62, 79, 178, .25); // applies a filter on top of photos
+      width: 100%;
 
   .img-wrapper img
     width: 100%;

@@ -2,6 +2,7 @@
 @import '_settings'
 @import '_buttons'
 @import "material"
+@lost gutter 60px
 
 scrollbar_width = 17px
 header_width = 135px
@@ -51,11 +52,10 @@ header_width = 135px
       section.services_panel
         background-color $starboard_fold_dark
         .services
-          //lost-flex-container row
-          lost-center 980px
+          lost-center 80*14px
           .col
             lost-column 1/3
-            background: #bbffeb
+            background transparent
   .mobile
     .cta_button
       position: relative
