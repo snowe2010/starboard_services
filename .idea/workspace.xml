@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d269884-827b-44e6-9234-e471f86f26ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/material/_cards.styl" afterPath="$PROJECT_DIR$/assets/css/material/_cards.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/card.jade" afterPath="$PROJECT_DIR$/views/card.jade" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +31,11 @@
                 <state relative-caret-position="-527">
                   <caret line="10343" column="0" lean-forward="false" selection-start-line="10343" selection-start-column="0" selection-end-line="10343" selection-end-column="0" />
                   <folding>
-                    <marker date="1493597258084" expanded="true" signature="2566:272131" ph="[...]" />
-                    <marker date="1493597258084" expanded="true" signature="272103:272105" ph="{...}" />
-                    <marker date="1493597258084" expanded="true" signature="272103:272119" ph="{...}" />
-                    <marker date="1493597258084" expanded="true" signature="272112:272117" ph="/*...*/" />
-                    <marker date="1493597258084" expanded="true" signature="272121:272129" ph="/*...*/" />
+                    <marker date="1493600870077" expanded="true" signature="2566:272131" ph="[...]" />
+                    <marker date="1493600870077" expanded="true" signature="272103:272105" ph="{...}" />
+                    <marker date="1493600870077" expanded="true" signature="272103:272119" ph="{...}" />
+                    <marker date="1493600870077" expanded="true" signature="272112:272117" ph="/*...*/" />
+                    <marker date="1493600870077" expanded="true" signature="272121:272129" ph="/*...*/" />
                   </folding>
                 </state>
               </provider>
@@ -59,8 +58,8 @@
           <file leaf-file-name="_cards.styl" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/css/material/_cards.styl">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-782">
-                  <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+                <state relative-caret-position="351">
+                  <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -132,6 +131,7 @@
       <find>ign</find>
       <find>ihn</find>
       <find>main</find>
+      <find>close</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Dropbox\Tyler\personal\projects\roots\starboardservices_rewrite\public</dir>
@@ -481,12 +481,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493493748983</updated>
-      <workItem from="1493493751369" duration="35857000" />
+      <workItem from="1493493751369" duration="36845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35857000" />
+    <option name="totallyTimeSpent" value="36845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -666,11 +666,11 @@
         <state relative-caret-position="-527">
           <caret line="10343" column="0" lean-forward="false" selection-start-line="10343" selection-start-column="0" selection-end-line="10343" selection-end-column="0" />
           <folding>
-            <marker date="1493597258084" expanded="true" signature="2566:272131" ph="[...]" />
-            <marker date="1493597258084" expanded="true" signature="272103:272105" ph="{...}" />
-            <marker date="1493597258084" expanded="true" signature="272103:272119" ph="{...}" />
-            <marker date="1493597258084" expanded="true" signature="272112:272117" ph="/*...*/" />
-            <marker date="1493597258084" expanded="true" signature="272121:272129" ph="/*...*/" />
+            <marker date="1493600870077" expanded="true" signature="2566:272131" ph="[...]" />
+            <marker date="1493600870077" expanded="true" signature="272103:272105" ph="{...}" />
+            <marker date="1493600870077" expanded="true" signature="272103:272119" ph="{...}" />
+            <marker date="1493600870077" expanded="true" signature="272112:272117" ph="/*...*/" />
+            <marker date="1493600870077" expanded="true" signature="272121:272129" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -781,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/material/_cards.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+        <state relative-caret-position="351">
+          <caret line="72" column="16" lean-forward="true" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding />
         </state>
       </provider>
