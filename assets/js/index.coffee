@@ -1,16 +1,4 @@
-document.write("It works.")
-#
-#qwery = require('qwery')
-#bonzo = require('bonzo')
-#domready = require('domready')
-#bean = require('bean')
-
-#$ = (selector) ->
-#   bonzo(qwery(selector))
-#import * as $ from 'ender.js'
-
 $.domReady(() ->
-  console.log "hi"
 
   $('#product-card').hover (->
     $(this).addClass 'animate'
