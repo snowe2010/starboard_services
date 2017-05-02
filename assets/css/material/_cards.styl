@@ -327,7 +327,9 @@ button:hover {
 
 
 
-
+/**
+Adidas version
+ */
 
 
 
@@ -336,7 +338,9 @@ button:hover {
 * { margin: 0; padding: 0; }
 
 .product-image
-  max-width 325px
+  max-height 300px
+  position: absolute;
+  transform: translate(-50%, 0%);
 
 #view-code{
   color:#365D6A;
@@ -360,8 +364,6 @@ button:hover {
   height:500px;
   background:#fff;
   position:relative;
-  left:-5px;
-  top:-5px;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
@@ -380,8 +382,8 @@ button:hover {
   transition: all 100ms ease-out;
 }
 #product-card{
-  width:325px;
-  height:490px;
+  width:335px;
+  height:400px;
   position:absolute;
   overflow:hidden;
   transform-style: preserve-3d;
@@ -419,10 +421,8 @@ div#product-card.flip180{
   transition:  150ms ease-out;
 }
 #product-card.animate{
-  top:5px;
-  left:5px;
   width:335px;
-  height:500px;
+  height:400px;
   box-shadow:0px 13px 21px -5px rgba(0, 0, 0, 0.3);
   -webkit-transition:  100ms ease-out;
   -moz-transition:  100ms ease-out;
@@ -435,7 +435,7 @@ div#product-card.flip180{
   background:#fff;
   position:absolute;
   box-sizing border-box
-  top:386px;
+  top:300px;
   left:0;
   width 100%
   height:300px;
@@ -446,7 +446,7 @@ div#product-card.flip180{
   transition: all 200ms ease-out;
 }
 #product-card.animate .stats-container{
-  top:272px;
+  top 200px
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
@@ -527,7 +527,7 @@ div#product-card.flip180{
   width:152px;
   font-size:15px;
   margin-left:-75px;
-  top:115px;
+  top 85px;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
