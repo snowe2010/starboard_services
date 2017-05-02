@@ -1,3 +1,4 @@
+include ./adidas_card.jade
 section.services_panel
   a(name='services')
   h1 What We Do
@@ -7,17 +8,28 @@ section.services_panel
       - var card_subtitle = 'Pre & Post Completion'
       - var card_help = "dlfjdfkldf"
       - var image = "jamie-street-105288"
-      include card
+      +adidas_card(card_title, card_subtitle, image)
+        ul
+          li som
+          li dlfjk
+          li dflkj
     .col.card.card-3#make_ready
       - var card_title = 'Real Estate Make Ready'
       - var card_subtitle = "Open House coming up? New renters?"
       - var card_help = "Another thing"
       - var image = "anthony-delanoix-16765"
-      include card
-    //.col.card.card-3#external_cleanup
-    //  - var card_title = 'External Business Cleanup'
-    //  - var card_subtitle = "Already have a business, but don't have the time to spruce it up?"
-    //  - var card_help = "External Business Cleanup"
-    //  - var image = "pietro-de-grandi-149555"
-    .col
-      include adidas_card
+      +adidas_card(card_title, card_subtitle, image)
+        ul
+          li while
+          li there
+          li is
+          li stuff
+    .col.card.card-1
+      - var card_title = 'Business Cleanup'
+      - var card_subtitle = "Exterior Cleaning"
+      - var image = "pietro-de-grandi-149555"
+      +adidas_card(card_title, card_subtitle, image)
+        ul
+          li Pressure Washing
+          li Trash Clean-Up
+          li Window Cleaning
