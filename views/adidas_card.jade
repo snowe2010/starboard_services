@@ -1,4 +1,4 @@
-mixin adidas_card(title, subtitle, image)
+mixin adidas_card(title, subtitle, page, image)
   #make-3D-space
     #product-card
       #product-front
@@ -6,7 +6,7 @@ mixin adidas_card(title, subtitle, image)
         //img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png', alt='')
         img.product-image(src='img/services/#{image}.jpg', alt='')
         .image_overlay
-        #view_details Get a Quote
+        a#view_details(href="/#{page}") Get a Quote
         .stats-container
           span.product_name #{title}
           p #{subtitle}

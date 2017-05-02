@@ -6,9 +6,9 @@ section.services_panel
     .col.card.card-3#cleanup
       - var card_title = 'Construction Cleanup'
       - var card_subtitle = 'Pre & Post Completion'
-      - var card_help = "dlfjdfkldf"
       - var image = "jamie-street-105288"
-      +adidas_card(card_title, card_subtitle, image)
+      - var page = "constructionCleanup"
+      +adidas_card(card_title, card_subtitle, page, image)
         ul
           li som
           li dlfjk
@@ -16,9 +16,9 @@ section.services_panel
     .col.card.card-3#make_ready
       - var card_title = 'Real Estate Make Ready'
       - var card_subtitle = "Open House coming up? New renters?"
-      - var card_help = "Another thing"
       - var image = "anthony-delanoix-16765"
-      +adidas_card(card_title, card_subtitle, image)
+      - var page = "constructionCleanup"
+      +adidas_card(card_title, card_subtitle, page, image)
         ul
           li while
           li there
@@ -28,7 +28,8 @@ section.services_panel
       - var card_title = 'Business Cleanup'
       - var card_subtitle = "Exterior Cleaning"
       - var image = "pietro-de-grandi-149555"
-      +adidas_card(card_title, card_subtitle, image)
+      - var page = "constructionCleanup"
+      +adidas_card(card_title, card_subtitle, page, image)
         ul
           li Pressure Washing
           li Trash Clean-Up
