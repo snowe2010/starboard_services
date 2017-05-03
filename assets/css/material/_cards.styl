@@ -27,236 +27,9 @@
 .card-5
   box-shadow 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)
 
-// TODO FIX ALL THIS
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
-button:focus {
-  outline: none;
-}
-
-button:hover {
-  opacity: .8;
-}
-
-.card-container
-  height: 508px;
-  background: white;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
-  transform: translate3d(-50%, -50%, 0);
-  h2.card-title
-    padding: 20px;
-    color: white;
-    background: #3E4FB2;
-    font-weight: 300;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
-  .detail
-    color: #777;
-    padding: 20px;
-    line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
-  .img-wrapper
-    padding: 0;
-    position: relative;
-    &:after
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      //background: rgba(62, 79, 178, .25); // applies a filter on top of photos
-      width: 100%;
-
-  .img-wrapper img
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin: 0;
-    display: block;
-    position: relative;
-
-  .button-wrapper
-    width: 50px;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: 50% 50%;
-    right: 20px;
-    bottom: 20px;
-    transition: transform .3s .3s;
-
-.card-button {
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  z-index: 9;
-  position: relative;
-  display: inline-block
-  font-size: 20px;
-}
-
-.main-button {
-  background: $starboard_red_dark;
-  align-self: flex-end;
-  color: white;
-}
-
-.ripple {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 50%;
-  z-index: -9;
-  background: transparent;
-  border: 1px solid $starboard_red_dark;
-  transform: scale(.5);
-  transition: .3s all ease;
-  opacity: 1;
-}
-
-.rippling {
-  animation: .3s rippling 1;
-}
-
-@keyframes rippling {
-
-  25% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-
-}
-
-.layer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 50px;
-  height: 50px;
-  background: $starboard_red_dark;
-  border-radius: 50%;
-  z-index: -99;
-  pointer-events: none;
-  transition: .3s all ease;
-}
-
-.button-wrapper.clicked {
-  transform: rotate(90deg) translateY(-96px);
-  right: 0;
-  bottom: 0;
-  transition: .3s all ease .6s;
-}
-
-.button-wrapper.clicked .main-button {
-  opacity: 0;
-  transition: .3s all ease .3s;
-}
-
-.button-wrapper.clicked .layer {
-  transform: scale(15);
-  transition: .3s all ease .9s;
-}
-
-.layered-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-
-.layered-content.active {
-  opacity: 1;
-}
-
-.close-button {
-  background: white;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: $starboard_red_dark;
-}
-
-.layered-content.active .close-button {
-  animation: .5s bounceIn;
-}
-
-.layered-content .content img {
-  width: 80px;
-  shape-outside: 80px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px;
-  padding: 10px;
-  box-sizing: border-box;
-  background: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  transition: .3s all ease;
-}
-
-.card-content p {
-  color: white;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.5;
-  font-family: 'Roboto', sans-serif;
-}
-
-.card-content p a {
-  font-size: 12px;
-  background: white;
-  padding: 2.5px 5px;
-  color: $starboard_red_dark;
-  text-decoration: none;
-  border-radius: 50px;
-  display: inline-block;
-  margin-left: 1.5px;
-}
-
-.card-content img,
-.card-content p {
-  opacity: 0;
-  position: relative;
-  top: -7.5px;
-}
-
-.layered-content.active .card-content img {
-  opacity: 1;
-  top: 0;
-  transition: .5s all ease .5s;
-}
-
-.layered-content.active .card-content p {
-  opacity: 1;
-  top: 0;
-  transition: .5s all ease 1s;
-}
 
 /**
 Adidas version
@@ -268,55 +41,32 @@ Adidas version
   padding: 0;
 }
 
+/* --- Product Card ---- */
+
 .product-image
   max-height 300px
   position: absolute;
   transform: translate(-50%, 0%);
 
-#view-code {
-  color: #365D6A;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
-  position: absolute;
-  top: 640px;
-  left: 50%;
-  margin-left: -35px;
-}
 
-#view-code:hover {
-  color: #34c29e;
-}
-
-/* --- Product Card ---- */
-#make-3D-space {
-  position: relative;
-  perspective: 800px;
-  height: 500px;
-  transform-style: preserve-3d;
-  transition: transform 5s;
-}
-
-#product-front {
+#product-card {
   height: 500px;
   background: #fff;
   position: relative;
   transition: all 100ms ease-out;
 }
 
-#product-card.animate #product-front {
+#product-card-container.animate #product-card {
   top: 0;
   left: 0;
   transition: all 100ms ease-out;
 }
 
-#product-card
+#product-card-container
   width: 100%;
   height: 400px;
   position: absolute;
   overflow: hidden;
-  transform-style: preserve-3d;
   transition: 100ms ease-out;
   &.animate
     box-shadow: 0px 13px 21px -5px rgba(0, 0, 0, 0.3);
@@ -403,9 +153,6 @@ Adidas version
       background: #fff;
       color: #365D6A;
       cursor: pointer;
-
-.stats
-  box-sizing border-box
 
 div.shadow {
   width: 100%;

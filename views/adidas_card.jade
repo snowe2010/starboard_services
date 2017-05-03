@@ -1,16 +1,15 @@
 mixin adidas_card(title, subtitle, page, image)
-  #make-3D-space
+  #product-card-container
     #product-card
-      #product-front
-        .shadow
-        img.product-image(src='img/services/#{image}.jpg', alt='')
-        .image_overlay
-        a#view_details(href="/#{page}") Get a Quote
-        .stats-container
-          span.product_name #{title}
-          p #{subtitle}
-          .product-options
-            if block
-              block
-            else
-              p ""
+      .shadow
+      img.product-image(src='img/services/#{image}.jpg', alt='')
+      .image_overlay
+      a#view_details(href="/#{page}") Get a Quote
+      .stats-container
+        span.product_name #{title}
+        p #{subtitle}
+        .product-options
+          if block
+            block
+          else
+            p ""
