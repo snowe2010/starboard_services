@@ -3,7 +3,6 @@ mixin adidas_card(title, subtitle, page, image)
     #product-card
       #product-front
         .shadow
-        //img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png', alt='')
         img.product-image(src='img/services/#{image}.jpg', alt='')
         .image_overlay
         a#view_details(href="/#{page}") Get a Quote
@@ -15,23 +14,3 @@ mixin adidas_card(title, subtitle, page, image)
               block
             else
               p ""
-      //#product-back
-      //  .shadow
-      //  #carousel
-      //    ul
-      //      li
-      //        img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png', alt='')
-      //      li
-      //        img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png', alt='')
-      //      li
-      //        img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png', alt='')
-      //    .arrows-perspective
-      //      .carouselPrev
-      //        .y
-      //        .x
-      //      .carouselNext
-      //        .y
-      //        .x
-      //  #flip-back
-      //    #cy
-      //    #cx
