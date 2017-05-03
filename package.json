@@ -26,6 +26,7 @@
     "stylus": "^0.54.2"
   },
   "devDependencies": {
+    "poststylus": "^0.2.3",
     "ts-loader": "^2.0.3"
   }
 }

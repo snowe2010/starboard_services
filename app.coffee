@@ -1,15 +1,14 @@
 axis         = require 'axis'
 rupture      = require 'rupture'
 autoprefixer = require 'autoprefixer-stylus'
+postStylus   = require 'poststylus'
 js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 accord       = require 'accord'
-postcss      = accord.load 'postcss'
 lost         = require 'lost'
 nestedprops  = require('postcss-nested-props').default
 webpack      = require 'roots-webpack'
 coffeeloader = require 'coffee-loader'
-#$ = require 'assets/js/ender.js'
 
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf', '.idea/**']
@@ -33,7 +32,7 @@ module.exports =
 
   stylus:
     import: ['rupture']
-    use: [axis(), rupture(), autoprefixer()]
+    use: [axis(), rupture(), autoprefixer(), postStylus(['lost'])]
     sourcemap: true
 
   'coffee-script':
@@ -41,6 +40,3 @@ module.exports =
 
   jade:
     pretty: true
-
-  postcss:
-    use: [lost()]
