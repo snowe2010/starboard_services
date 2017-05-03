@@ -302,9 +302,6 @@ Adidas version
   height: 500px;
   background: #fff;
   position: relative;
-  -webkit-transition: all 100ms ease-out;
-  -moz-transition: all 100ms ease-out;
-  -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
 
@@ -334,6 +331,13 @@ Adidas version
       -moz-transition: all 200ms ease-out;
       -o-transition: all 200ms ease-out;
       transition: all 200ms ease-out;
+    #view_details
+      opacity: 1;
+      width: 152px;
+      font-size: 15px;
+      margin-left: -75px;
+      top 85px;
+      transition: all 200ms ease-out;
   .stats-container
     background: #fff;
     position: absolute;
@@ -356,78 +360,52 @@ Adidas version
       color: #365D6A;
       font-size: 22px;
       font-weight: 600;
+    .product-options
+      padding: 2px 0 0;
+      ul
+        list-style none
+      strong
+        font-weight: 700;
+        color: #393c45;
+        font-size: 14px;
+      span
+        color: #969699;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 8px;
+
+  .image_overlay
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #365D6A;
+    opacity: 0;
+
+  #view_details
+    position: absolute;
+    top: 112px;
+    left: 50%;
+    margin-left: -85px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration none
+    font-weight: 700;
+    padding: 10px 0;
+    width: 172px;
+    opacity: 0;
+    transition: all 200ms ease-out;
+    &:hover
+      background: #fff;
+      color: #365D6A;
+      cursor: pointer;
 
 .stats
   box-sizing border-box
-
-.image_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #365D6A;
-  opacity: 0;
-}
-
-
-.product-options
-  padding: 2px 0 0;
-  ul
-    list-style none
-
-.product-options strong {
-  font-weight: 700;
-  color: #393c45;
-  font-size: 14px;
-}
-
-.product-options span {
-  color: #969699;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 8px;
-}
-
-#view_details {
-  position: absolute;
-  top: 112px;
-  left: 50%;
-  margin-left: -85px;
-  border: 2px solid #fff;
-  color: #fff;
-  font-size: 19px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration none
-  font-weight: 700;
-  padding: 10px 0;
-  width: 172px;
-  opacity: 0;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-}
-
-#view_details:hover {
-  background: #fff;
-  color: #365D6A;
-  cursor: pointer;
-
-}
-
-#product-card.animate #view_details {
-  opacity: 1;
-  width: 152px;
-  font-size: 15px;
-  margin-left: -75px;
-  top 85px;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-}
 
 div.shadow {
   width: 100%;
@@ -438,8 +416,5 @@ div.shadow {
   left: 0;
   z-index: 3;
   display: none;
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
   background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
 }
