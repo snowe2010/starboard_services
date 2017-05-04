@@ -27,7 +27,7 @@ module.exports =
 #        ]
 #      ),
     js_pipeline(files: ["assets/js/*.js", "assets/js/*.coffee"], out: "js/bundle.js")
-    css_pipeline(files: 'assets/css/*.styl')
+    css_pipeline(files: 'assets/css/**/*.styl')
   ]
 
   stylus:
