@@ -1,4 +1,5 @@
 extends components/layout
+include tools
 
 block content
   .content
@@ -19,10 +20,8 @@ block content
           include index_panels/services
         .panel.quote-form
           .flow-container
-            p loremipsum() lakdfjlkdsjfkalkfafd;lkjas;df;jafld ;lsadjf l;aksd jf;lj s;flj as;dlfj a;lsdj f;lajsd f;lj ad;lj ;aldjs ;lj as;dlj ;ladjs ;lasdhg;lasdjg hojlkoisdjflkjkjdfkljlkasdf jkl
-            include components/quote
-
-  //  .area
-  //    iframe(src="https://www.google.com/maps/d/u/2/embed?mid=1hX3y66bEeR93ZTITKjKsqQ5Wxto" width="640" height="480")
-  // Your finest resource for construction cleaning services, commercial, residential, and food service clean-up in Central Texas. We are a local, family-owned business located in Waco, Texas, serving McLennan and neighboring counties within Central Texas. We take pride in our service and quality, doing it right the first time, on-time.
-  // You can trust Starboard Services to exceed your expectations for all of your post-construction needs. We service restaurants, food service establishments, and commercial and residential properties.
+            .content-wrapper
+              .quote-wrapper
+                +lipsum(3, "paragraphs")
+            .content-wrapper
+              include components/quote
