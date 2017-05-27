@@ -1,6 +1,14 @@
+@import "_settings"
+
 footer.footer
   lost-center 80*14px
   .footer-col
-    border-top 1px solid #0011ff
+    .social
+      lost-center 100%
+      lost-align center
+      > *
+        lost-column 1/2
+        width 40px
+    border-top 1px solid $color_quaternary
     lost-column 1/3
     height 100px
