@@ -2,39 +2,27 @@
 
 #index_quote
   padding 3rem
+  margin auto
+  width 100%
+  height calc(99.99% * 3/4)
 
-.content-wrapper
-  //position: absolute;
-  width: 100%;
-
-  //height: auto;
-  //background-color: $color_secondary;
   .quote-panel
     background $white
     position: relative;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     form
       text-align: center;
       h1
         margin-bottom 20px
-    .button-wrapper
-      margin-top: 15px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+        lost-row 1/4
 
-
-.input {
+form .input
+  lost-row 1/4
   position: relative;
-  width: 300px;
-  margin-bottom: 25px;
-  #description,
-  input {
+  //margin-bottom: 25px;
+  #description
+    height 130px
+  #description, input
     background: transparent;
     outline: none;
     font-size: 1em;
@@ -46,8 +34,7 @@
     color: $font-color;
     font-family: $font-stack;
     border-bottom: 1px solid $color_text_primary;
-  }
-  label {
+  label
     color: $color_text_primary;
     font-size: 0.85em;
     font-weight: normal;
@@ -58,8 +45,7 @@
     top: 15px;
     transition: 0.195s ease all;
     text-transform: uppercase;
-  }
-}
+
 
 .bar {
   position: relative;
@@ -73,6 +59,8 @@
   transition: all 0.195s ease;
 }
 
+textarea:focus ~ .bar,
+textarea:valid ~ .bar,
 input:focus ~ .bar,
 input:valid ~ .bar {
   width: 100%;
