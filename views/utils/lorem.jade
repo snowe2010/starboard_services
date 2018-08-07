@@ -1,0 +1,113 @@
+//-    Lorem ipsum mixin
+mixin lipsum(items, type)
+  //- Source (Lorem ipsum by default) text.
+  -var source = "Massacre a bird in the living room and then look like the cutest and most innocent animal on the planet. Plays league of legends love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater). Have secret plans meowing chowing and wowing purr while eating climb a tree, wait for a fireman jump to fireman then scratch his face and lies down howl on top of tall thing. Attack the dog then pretend like nothing happened kick up litter. Spit up on light gray carpet instead of adjacent linoleum roll on the floor purring your whiskers off and purr. Russian blue purr when being pet stand in front of the computer screen sit by the fire. Spill litter box, scratch at owner, destroy all furniture, especially couch scratch leg; meow for can opener to feed me so under the bed, so put toy mouse in food bowl run out of litter box at full speed yet warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats purr for no reason eat owner's food. Refuse to drink water except out of someone's glass fooled again thinking the dog likes me show belly hide head under blanket so no one can see lick plastic bags, human is washing you why halp oh the horror flee scratch hiss bite. Poop on grasses Gate keepers of hell and if it smells like fish eat as much as you wish or sleep in the bathroom sink. Missing until dinner time. Meow to be let in poop in litter box, scratch the walls for present belly, scratch hand when stroked. Purr licks paws put toy mouse in food bowl run out of litter box at full speed . Thug cat eat the fat cats food. Attack dog, run away and pretend to be victim. Pelt around the house and up and down stairs chasing phantoms decide to want nothing to do with my owner today peer out window, chatter at birds, lure them to mouth going to catch the red dot today going to catch the red dot today so sun bathe, so plan steps for world domination. Slap kitten brother with paw hola te quiero. Fall asleep on the washing machine jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water, dream about hunting birds. Mrow leave hair everywhere always hungry and kitty! kitty! yet knock over christmas tree sniff sniff. Stares at human while pushing stuff off a table eat owner's food lick yarn hanging out of own butt pee in the shoe. Chirp at birds toy mouse squeak roll over, yet love to play with owner's hair tie so jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water kitty poochy yet eat owner's food so give me attention or face the wrath of my claws. Use lap as chair chase ball of string. Hide from vacuum cleaner sit in window and stare ooo, a bird! yum so intently sniff hand. Rub face on owner. Hola te quiero cat slap dog in face mesmerizing birds ask for petting yet run outside as soon as door open or annoy kitten brother with poking. Paw at your fat belly. Licks paws demand to be let outside at once, and expect owner to wait for me as i think about it, kitty loves pigs. Freak human out make funny noise mow mow mow mow mow mow success now attack human stare at ceiling. Has closed eyes but still sees you. Hopped up on catnip purr while eating yet please stop looking at your phone and pet me and sit on human and play time, so proudly present butt to human. Proudly present butt to human kitty loves pigs and warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats. Howl on top of tall thing purrrrrr step on your keyboard while you're gaming and then turn in a circle for attack the dog then pretend like nothing happened fall over dead (not really but gets sympathy). Lie in the sink all day cats go for world domination scratch leg; meow for can opener to feed me but caticus cuteicus, and cat dog hate mouse eat string barf pillow no baths hate everything so intrigued by the shower. Favor packaging over toy. Stares at human while pushing stuff off a table why must they do that plan steps for world domination yet poop in the plant pot or destroy couch as revenge. Sit on human lay on arms while you're using the keyboard. And sometimes switches in french and say \"miaou\" just because well why not mew or has closed eyes but still sees you, if it smells like fish eat as much as you wish purr. Love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater). Eat the fat cats food kitty poochy. Flee in terror at cucumber discovered on floor fooled again thinking the dog likes me yet bleghbleghvomit my furball really tie the room together. Eat all the power cords. If it fits, i sits. Meowing chowing and wowing chew iPad power cord, yet hunt anything that moves who's the baby, yet spread kitty litter all over house. Munch on tasty moths under the bed. Lick arm hair Gate keepers of hell but kitty loves pigs this human feeds me, i should be a god yet and sometimes switches in french and say \"miaou\" just because well why not yet lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back so claw drapes. Use lap as chair throwup on your pillow. Use lap as chair always hungry flee in terror at cucumber discovered on floor so ears back wide eyed. Missing until dinner time the dog smells bad or eat a plant, kill a hand. With tail in the air curl into a furry donut, eat from dog's food. Have secret plans soft kitty warm kitty little ball of furr play riveting piece on synthesizer keyboard. "
+
+  //- Variables for generation
+  //- Boundary value for number of words in sentence
+  -var minWords = 2;
+  -var maxWords = 18;
+  //- Boundary value for number of sentences in paragraph
+  -var minSentences = 1;
+  -var maxSentences = 10;
+  //- Chance for comma after word (really a little bit less)
+  -var commaChance = 0.2;
+  //- Chance for interrogative sentence
+  -var questionChance = 0.2;
+
+
+  //- Remove punctuation and split string to word array.
+  - var wordArray = source.replace(/[\.?!,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase().split(" ");
+
+  //- Capitalize first letter
+  - var firstToUpperCase = function(text) {
+    - return text.charAt(0).toUpperCase() + text.slice(1)
+  - }
+
+  //- Generate random value from min and max with a little bit normally-distributed result
+  -var getNumberOfItems = function(min, max){
+    -var iteration = 3;
+    -var random = function(min, max){
+      -return Math.random() * (max - min);
+    -}
+    -var result
+    -for (var i=0; i<iteration; i++){
+      -if (result === undefined){
+        -result = random(min,max);
+      -}
+      -else{
+        -result += random(min,max);
+      -}
+    -}
+    -return Math.floor(result / iteration) + min;
+  -}
+
+  //- Generate sentence
+  -var generateSentence = function(){
+  //- Store sentence
+  -var sentence = "";
+  //- Minimum and maximum words in sentence and generate words quantity
+  -var words = getNumberOfItems(minWords,maxWords);
+
+  //- Generate sentence itself
+  -for (var i=0; i< words; i++){
+  -sentence += wordArray[Math.floor(Math.random() * wordArray.length)];
+  // Add some punctuation
+  -if (i == (words -1)){
+  -if (Math.random() < questionChance){
+  -sentence += "? ";
+  -}
+  -else{
+  -sentence += ". ";
+  -}
+  -}
+  -else if (Math.random() < commaChance){
+  -sentence += ", ";
+  -}
+  -else {
+  -sentence +=" ";
+  -}
+  -}
+  -return firstToUpperCase(sentence)
+  -}
+
+  //- Generate requested lipsum: single word with defined lenght, some words, some sentnences and paragraphs
+  if type == "words"
+    -var words = ""
+    -for (var i = 0; i < items; i++) {
+    -words += wordArray[Math.floor(Math.random() * wordArray.length)]
+    if i === 0
+      -words = firstToUpperCase(words)
+    -words += " "
+    -}
+    =words
+
+  else if type == "characters"
+    -var characters = ""
+    // Add words to string
+    while characters.length < items
+      -characters += wordArray[Math.floor(Math.random() * wordArray.length)]
+
+    //- Capitalize first letter
+    -characters = firstToUpperCase(characters)
+    //- Crop string to requested length
+    if (characters.length > items)
+      = characters.substring(0, items)
+    else
+      = characters
+
+  else if type == "paragraphs"
+    -for (var i=0; i< items; i++){
+    //- Set number of sentences
+    -var sentences = getNumberOfItems(minSentences, maxSentences)
+    p
+      -for (var k=0; k< sentences; k++){
+      =generateSentence()
+      -}
+    -}
+
+  else if type == "sentences"
+    -for (var i=0; i< items; i++){
+    =generateSentence()
+    -}
+
